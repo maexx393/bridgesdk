@@ -35,7 +35,7 @@ var _FACTORY_AND_INIT, _SOLIDITY_TYPE_MAXIMA;
   ChainId[ChainId["MATIC"] = 137] = "MATIC";
   ChainId[ChainId["HECO"] = 128] = "HECO";
   ChainId[ChainId["FANTOM"] = 250] = "FANTOM";
-  ChainId[ChainId["ALGORAND"] = 250] = "ALGORAND";
+  ChainId[ChainId["ALGORAND"] = 300] = "ALGORAND";
   ChainId[ChainId["SHIDEN"] = 336] = "SHIDEN";
   ChainId[ChainId["IOTEX"] = 4689] = "IOTEX";
   ChainId[ChainId["HARMONY"] = 1666600000] = "HARMONY";
@@ -522,10 +522,10 @@ var OKT = Currency.OKT;
 var MTV = Currency.MTV;
 var METIS = Currency.METIS;
 var GLMR = Currency.GLMR;
-var ETHER_CURRENCIES = [ETHER, AVAX, BNB, DEV, MATIC, HECO, MOVR, FTM, ALGO, SDN, IOTX, ONE$1, CRO, OKT, MTV, METIS, GLMR];
-var ETHER_NAMES_CURRENCIES = ['ETH', 'AVAX', 'BNB', 'DEV', 'MATIC', 'HT', 'MOVR', 'FTM', 'ALGO', 'SDN', 'IOTX', 'ONE', 'CRO', 'OKT', 'MTV', 'METIS', 'GLMR'];
+var ETHER_CURRENCIES = [ETHER, AVAX, BNB, DEV, MATIC, HECO, MOVR, FTM, SDN, IOTX, ONE$1, CRO, OKT, MTV, METIS, GLMR];
+var ETHER_NAMES_CURRENCIES = ['ETH', 'AVAX', 'BNB', 'DEV', 'MATIC', 'HT', 'MOVR', 'FTM', 'SDN', 'IOTX', 'ONE', 'CRO', 'OKT', 'MTV', 'METIS', 'GLMR'];
 var CHAIN_IDS_AND_CURRENCIES = [[exports.ChainId.MAINNET, ETHER], [exports.ChainId.ROPSTEN, ETHER], [exports.ChainId.RINKEBY, ETHER], [exports.ChainId.GÖRLI, ETHER], [exports.ChainId.KOVAN, ETHER], [exports.ChainId.FUJI, AVAX], [exports.ChainId.AVALANCHE, AVAX], [exports.ChainId.SMART_CHAIN, BNB], [exports.ChainId.SMART_CHAIN_TEST, BNB], [exports.ChainId.MOONBASE_ALPHA, DEV], [exports.ChainId.MOONRIVER, MOVR], [exports.ChainId.MUMBAI, MATIC], [exports.ChainId.MATIC, MATIC], [exports.ChainId.HECO, HECO], [exports.ChainId.FANTOM, FTM], [exports.ChainId.ALGORAND, ALGO], [exports.ChainId.SHIDEN, SDN], [exports.ChainId.SHIDEN, SDN], [exports.ChainId.IOTEX, IOTX], [exports.ChainId.HARMONY, ONE$1], [exports.ChainId.CRONOS, CRO], [exports.ChainId.OKEX, OKT], [exports.ChainId.MULTIVAC, MTV], [exports.ChainId.METIS_NETWORK, METIS], [exports.ChainId.MOONBEAM, GLMR]];
-var NETWORK_LABELS = (_NETWORK_LABELS = {}, _NETWORK_LABELS[exports.ChainId.RINKEBY] = 'Rinkeby', _NETWORK_LABELS[exports.ChainId.ROPSTEN] = 'Ropsten', _NETWORK_LABELS[exports.ChainId.GÖRLI] = 'Görli', _NETWORK_LABELS[exports.ChainId.KOVAN] = 'Kovan', _NETWORK_LABELS[exports.ChainId.FUJI] = 'Avalanche', _NETWORK_LABELS[exports.ChainId.AVALANCHE] = 'Avalanche', _NETWORK_LABELS[exports.ChainId.SMART_CHAIN] = 'SmartChain', _NETWORK_LABELS[exports.ChainId.SMART_CHAIN_TEST] = 'SmartChainTestnet', _NETWORK_LABELS[exports.ChainId.MOONBASE_ALPHA] = 'Moonbase', _NETWORK_LABELS[exports.ChainId.MUMBAI] = 'Mumbai', _NETWORK_LABELS[exports.ChainId.MAINNET] = 'Ethereum', _NETWORK_LABELS[exports.ChainId.MATIC] = 'Polygon', _NETWORK_LABELS[exports.ChainId.HECO] = 'HECO', _NETWORK_LABELS[exports.ChainId.MOONRIVER] = 'Moonriver', _NETWORK_LABELS[exports.ChainId.FANTOM] = 'Fantom', _NETWORK_LABELS[exports.ChainId.SHIDEN] = 'Shiden', _NETWORK_LABELS[exports.ChainId.IOTEX] = 'IoTeX', _NETWORK_LABELS[exports.ChainId.HARMONY] = 'Harmony', _NETWORK_LABELS[exports.ChainId.CRONOS] = 'Cronos', _NETWORK_LABELS[exports.ChainId.OKEX] = 'OKEx', _NETWORK_LABELS[exports.ChainId.MULTIVAC] = 'MultiVAC', _NETWORK_LABELS[exports.ChainId.METIS_NETWORK] = 'MetisNetwork', _NETWORK_LABELS[exports.ChainId.MOONBEAM] = 'Moonbeam', _NETWORK_LABELS);
+var NETWORK_LABELS = (_NETWORK_LABELS = {}, _NETWORK_LABELS[exports.ChainId.RINKEBY] = 'Rinkeby', _NETWORK_LABELS[exports.ChainId.ROPSTEN] = 'Ropsten', _NETWORK_LABELS[exports.ChainId.GÖRLI] = 'Görli', _NETWORK_LABELS[exports.ChainId.KOVAN] = 'Kovan', _NETWORK_LABELS[exports.ChainId.FUJI] = 'Avalanche', _NETWORK_LABELS[exports.ChainId.AVALANCHE] = 'Avalanche', _NETWORK_LABELS[exports.ChainId.SMART_CHAIN] = 'SmartChain', _NETWORK_LABELS[exports.ChainId.SMART_CHAIN_TEST] = 'SmartChainTestnet', _NETWORK_LABELS[exports.ChainId.MOONBASE_ALPHA] = 'Moonbase', _NETWORK_LABELS[exports.ChainId.MUMBAI] = 'Mumbai', _NETWORK_LABELS[exports.ChainId.MAINNET] = 'Ethereum', _NETWORK_LABELS[exports.ChainId.MATIC] = 'Polygon', _NETWORK_LABELS[exports.ChainId.HECO] = 'HECO', _NETWORK_LABELS[exports.ChainId.MOONRIVER] = 'Moonriver', _NETWORK_LABELS[exports.ChainId.FANTOM] = 'Fantom', _NETWORK_LABELS[exports.ChainId.ALGORAND] = 'Algorand', _NETWORK_LABELS[exports.ChainId.SHIDEN] = 'Shiden', _NETWORK_LABELS[exports.ChainId.IOTEX] = 'IoTeX', _NETWORK_LABELS[exports.ChainId.HARMONY] = 'Harmony', _NETWORK_LABELS[exports.ChainId.CRONOS] = 'Cronos', _NETWORK_LABELS[exports.ChainId.OKEX] = 'OKEx', _NETWORK_LABELS[exports.ChainId.MULTIVAC] = 'MultiVAC', _NETWORK_LABELS[exports.ChainId.METIS_NETWORK] = 'MetisNetwork', _NETWORK_LABELS[exports.ChainId.MOONBEAM] = 'Moonbeam', _NETWORK_LABELS);
 var NETWORK_SYMBOLS = {
   Ethereum: 'ETH',
   Rinkeby: 'ETH',
@@ -2668,6 +2668,7 @@ var Fetcher = /*#__PURE__*/function () {
 }();
 
 exports.JSBI = JSBI;
+exports.ALGO = ALGO;
 exports.AVAX = AVAX;
 exports.BNB = BNB;
 exports.CHAIN_IDS_AND_CURRENCIES = CHAIN_IDS_AND_CURRENCIES;
@@ -2682,7 +2683,6 @@ exports.ETHER_NAMES_CURRENCIES = ETHER_NAMES_CURRENCIES;
 exports.FACTORY_ADDRESS = FACTORY_ADDRESS;
 exports.FACTORY_AND_INIT = FACTORY_AND_INIT;
 exports.FTM = FTM;
-exports.ALGO = ALGO;
 exports.Fetcher = Fetcher;
 exports.Fraction = Fraction;
 exports.GLMR = GLMR;
