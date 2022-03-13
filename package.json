@@ -8,7 +8,7 @@
     "files": [
         "dist"
     ],
-    "repository": "https://github.com/maexx393/bridgesdk.git",
+    "repository": "https://github.com/hashprotocol/bridgesdk.git",
     "keywords": [
         "hashbridge",
         "hash",
